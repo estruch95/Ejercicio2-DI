@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#ff000000"
+    android:id="@+id/relativeLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TEXTO"
+        android:id="@+id/tvTexto"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffcccccc" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:text="New Text"
+        android:id="@+id/linea1"
+        android:layout_below="@+id/tvTexto"
+        android:layout_alignParentEnd="true"
+        android:background="#ffffffff"
+        android:layout_marginTop="2dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/linea1"
+        android:layout_below="@+id/linea1"
+        android:id="@+id/grupoFondo">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fondo negro"
+            android:id="@+id/rbFondoNegro"
+            android:textColor="#ffffffff"
+            android:checked="true"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fondo verde"
+            android:id="@+id/rbFondoVerde"
+            android:textColor="#ffffffff"
+            android:checked="false"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:buttonTint="#ffababab" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fondo rojo"
+            android:id="@+id/rbFondoRojo"
+            android:textColor="#ffffffff"
+            android:checked="false"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:buttonTint="#ff9b9b9b" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:id="@+id/linea2"
+        android:background="#ffffffff"
+        android:layout_below="@+id/grupoFondo"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/grupoTexto"
+        android:layout_below="@+id/linea2"
+        android:layout_alignEnd="@+id/linea2">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texto blanco"
+            android:id="@+id/rbBlanco"
+            android:textColor="#ffffffff"
+            android:checked="true"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texto amarillo"
+            android:id="@+id/rbAmarillo"
+            android:textColor="#ffffffff"
+            android:checked="false"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:buttonTint="#ff9b9b9b" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Texto azul"
+            android:id="@+id/rbAzul"
+            android:textColor="#ffffffff"
+            android:checked="false"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:buttonTint="#ffafafaf" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:id="@+id/linea3"
+        android:background="#ffffffff"
+        android:layout_below="@+id/grupoTexto"
+        android:layout_toEndOf="@+id/tvTexto"
+        android:layout_alignStart="@+id/linea2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar texto"
+        android:id="@+id/cbMostrarTexto"
+        android:layout_below="@+id/grupoTexto"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffffff"
+        android:checked="true"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp" />
+</RelativeLayout>
